@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+  background-color: #4b6794; /* Background color matching the image */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.App-header {
+  padding: 20px;
+  color: white;
+}
+
+.App-header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.App-header nav a:hover {
+  color: #61dafb;
+}
+
+.hexagon-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 1000px; /* Fixed height to ensure center alignment */
+  width: 1000px; /* Fixed width to ensure center alignment */
+}
+
+.controls {
+  margin: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  color: #000000;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #95bcd6;
+}
+
+.right-block {
+  width: 277px; /* Base size */
+  height: 120px; /* Base size */
+  background-color: #ffffff;
+  clip-path: polygon(21% 0%, 100% 0%, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  transition: transform 0.5s, background-color 0.5s, width 0.5s, height 0.5s;
+  cursor: pointer;
+  color: #0c1b33; /* Text color */
+  font-weight: bold;
+  position: absolute;
+  top: 55%; /* Adjusted to center vertically */
+  left: 56%;
+}
+
+.left-block {
+  width: 280px; /* Base size */
+  height: 118px; /* Base size */
+  background-color: #ffffff;
+  clip-path: polygon(0% 0%, 100% 0%, 79% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  transition: transform 0.5s, background-color 0.5s, width 0.5s, height 0.5s;
+  cursor: pointer;
+  color: #0c1b33; /* Text color */
+  font-weight: bold;
+  position: absolute;
+  top: 37%; /* Adjusted to center vertically */
+  left: 23%;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hexagon-grid {
+    height: 500px;
+    width: 500px;
+  }
+
+  .right-block {
+    width: 150px;
+    height: 65px;
+    top: 55%;
+    left: 60%;
+  }
+
+  .left-block {
+    width: 150px;
+    height: 65px;
+    top: 35%;
+    left: 25%;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hexagon-grid {
+    height: 300px;
+    width: 300px;
+  }
+
+  .right-block {
+    width: 100px;
+    height: 45px;
+    top: 55%;
+    left: 60%;
+  }
+
+  .left-block {
+    width: 100px;
+    height: 45px;
+    top: 35%;
+    left: 25%;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
