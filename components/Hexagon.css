@@ -1,0 +1,112 @@
+.hexagon {
+    width: 160px; /* Base size */
+    height: 160px; /* Base size */
+    background-color: #ffffff;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: transform 0.5s, background-color 0.5s, width 0.5s, height 0.5s;
+    cursor: pointer;
+    color: #0c1b33; /* Text color */
+    font-weight: bold;
+    position: absolute;
+  }
+  
+  .hexagon.active {
+    width: 240px; /* Larger size for active hexagon */
+    height: 240px; /* Larger size for active hexagon */
+    background-color: #ffffff;
+    color: #0c1b33;
+  }
+  
+  .hexagon.edge {
+    width: 100px; /* Smaller size for edge hexagons */
+    height: 100px; /* Smaller size for edge hexagons */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .left-two, .left-one, .center, .right-one, .right-two {
+    transition: all 0.5s;
+  }
+  
+  .left-two {
+    font-size: 12px;
+    top: 80%; /* Adjusted to center vertically */
+    left: 20%; /* Adjusted to center horizontally */
+    transform: translate(-50%, -50%); /* Center within grid item */
+  }
+  
+  .left-one {
+    font-size: 12px;
+    top: 68%; /* Adjusted to center vertically */
+    left: 32%; /* Adjusted to center horizontally */
+    transform: translate(-50%, -50%); /* Center within grid item */
+  }
+  
+  .center {
+    top: 50%; /* Adjusted to center vertically */
+    left: 50%; /* Adjusted to center horizontally */
+    transform: translate(-50%, -50%); /* Center within grid item */
+  }
+  
+  .right-one {
+    font-size: 12px;
+    top: 32%; /* Adjusted to center vertically */
+    left: 68%; /* Adjusted to center horizontally */
+    transform: translate(-50%, -50%); /* Center within grid item */
+  }
+  
+  .right-two {
+    font-size: 12px;
+    top: 20%; /* Adjusted to center vertically */
+    left: 80%; /* Adjusted to center horizontally */
+    transform: translate(-50%, -50%); /* Center within grid item */
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .hexagon {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .hexagon.active {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .hexagon.edge {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .left-two, .left-one, .center, .right-one, .right-two {
+      font-size: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hexagon {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .hexagon.active {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .hexagon.edge {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .left-two, .left-one, .center, .right-one, .right-two {
+      font-size: 8px;
+    }
+  }
